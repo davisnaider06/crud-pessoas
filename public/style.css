@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+main {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  margin: 4px 0 24px;
+  color: #64748b;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+}
+
+.card h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 12px 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+input {
+  padding: 9px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 2px solid #2563eb;
+  border-color: transparent;
+}
+
+.acoes {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  padding: 9px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.secundario {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+button.perigo {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+button.pequeno {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+#mensagem {
+  grid-column: 1 / -1;
+  margin: 0;
+  min-height: 20px;
+  font-size: 14px;
+}
+
+#mensagem.erro {
+  color: #b91c1c;
+}
+
+#mensagem.ok {
+  color: #15803d;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+th {
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #64748b;
+  padding: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+td.idade {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+td.botoes {
+  text-align: right;
+  white-space: nowrap;
+}
+
+td.botoes button + button {
+  margin-left: 6px;
+}
+
+#vazio {
+  color: #64748b;
+  margin: 12px 0 0;
+}
+
+@media (max-width: 640px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}

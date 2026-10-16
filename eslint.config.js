@@ -18,5 +18,9 @@ module.exports = [
       'prefer-const': 'error',
     },
   },
+  {
+    files: ['public/**/*.js'],
+    languageOptions: { sourceType: 'script', globals: globals.browser },
+  },
   prettier,
 ];

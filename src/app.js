@@ -1,9 +1,11 @@
+const path = require('path');
 const express = require('express');
 const { PessoaService, ValidationError, NotFoundError, ConflictError } = require('./pessoaService');
 
 function criarApp(service = new PessoaService()) {
   const app = express();
   app.use(express.json());
+  app.use(express.static(path.join(__dirname, '..', 'public')));
 
   app.get('/pessoas', (req, res) => res.json(service.listar()));
 
