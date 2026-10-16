@@ -55,3 +55,16 @@ npm run format:check
 docker build -t crud-pessoas .
 docker run -p 3000:3000 crud-pessoas
 ```
+
+## Evidências (pasta `prints/`)
+
+| Etapa do fluxo         | Prints                                                                                                    |
+| ---------------------- | --------------------------------------------------------------------------------------------------------- |
+| TDD – cálculo de idade | `01` red · `02` green · `03` refactor                                                                     |
+| Front                  | `04` teste red · `05` teste green · `06` tela de cadastro                                                 |
+| Back                   | `07` API REST respondendo JSON                                                                            |
+| Análise estática       | `08` ESLint                                                                                               |
+| Formatação             | `09` Prettier                                                                                             |
+| Testes                 | `10` unitários · `11` integração · `12` cobertura                                                         |
+| Git / GitHub           | `13` histórico de commits · `14` repositório · `15` commits · `16` pull request                           |
+| CI/CD (GitHub Actions) | `17` pipeline · `18` passos do job de testes · `20` log de lint/testes · `19`/`21` build da imagem Docker |
