@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cadastro de Pessoas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Cadastro de Pessoas</h1>
+        <p>CRUD com cálculo automático da idade</p>
+      </header>
+
+      <section class="card">
+        <h2 id="titulo-form">Nova pessoa</h2>
+        <form id="form-pessoa" novalidate>
+          <label>
+            CPF
+            <input name="cpf" placeholder="000.000.000-00" maxlength="14" required />
+          </label>
+          <label>
+            Nome
+            <input name="nome" placeholder="Nome completo" required />
+          </label>
+          <label>
+            Data de nascimento
+            <input name="dataNascimento" type="date" required />
+          </label>
+          <div class="acoes">
+            <button type="submit" id="btn-salvar">Cadastrar</button>
+            <button type="button" id="btn-cancelar" class="secundario" hidden>Cancelar</button>
+          </div>
+          <p id="mensagem" role="status"></p>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Pessoas cadastradas</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>CPF</th>
+              <th>Nome</th>
+              <th>Nascimento</th>
+              <th>Idade</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="lista"></tbody>
+        </table>
+        <p id="vazio">Nenhuma pessoa cadastrada.</p>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
